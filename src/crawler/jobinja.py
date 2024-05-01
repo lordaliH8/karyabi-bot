@@ -59,5 +59,4 @@ def jobinja_crawl():
     columns = ['title', 'description', 'employer', 'link', 'tags', 'city', 'date']
 
     dataframe = pd.DataFrame(list(zip(_title, _description, _employer, _link, _tags, _city, _date)), columns=columns)
-
-    dataframe.to_csv("../../csv/jobinja.csv", index=False)
+    return dataframe

@@ -115,10 +115,3 @@ def jobvision():
     df.columns = header
     return df
 
-
-# call the function
-df = jobvision()
-# create csv directory for csv files
-os.makedirs("../../csv", exist_ok=True)
-# create csv file
-df.to_csv("../../csv/jobvision.csv", index=False)

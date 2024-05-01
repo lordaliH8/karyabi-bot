@@ -107,11 +107,3 @@ def karboom_crawler():
     df = df.transpose()
     df.columns = header
     return df
-
-
-# call the function
-df = karboom_crawler()
-# create csv directory for csv files
-os.makedirs("../../csv", exist_ok=True)
-# create csv file
-df.to_csv("../../csv/karboom.csv", index=False)
