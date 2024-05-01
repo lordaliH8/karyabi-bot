@@ -114,4 +114,3 @@ def jobvision():
     df = df.transpose()
     df.columns = header
     return df
-
