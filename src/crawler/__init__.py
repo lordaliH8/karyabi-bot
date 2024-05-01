@@ -1,0 +1,1 @@
+from src.crawler.crawler_interface import CrawlerInterface
