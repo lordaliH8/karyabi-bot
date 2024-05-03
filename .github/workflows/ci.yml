@@ -1,0 +1,28 @@
+# Workflow Name
+name: CI Workflow
+# Events
+on:
+  pull_request:
+    branches:
+      - main
+      - soelz4
+  push:
+    branches:
+      - main
+      - soelz4
+# Jobs (Stages)
+jobs:
+  # 1st Job (Stage)
+  lint:
+    name: "RUN LINT"
+    defaults:
+      run:
+        shell: bash
+    # OS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: "https://github.com/actions/checkout"
+      # Lint & Format, will not Fix but Sets Exit Code on Error
+      - run: make lint
+        name: "RUN Linting"
